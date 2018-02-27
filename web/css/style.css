@@ -1,0 +1,290 @@
+.invalid-feedback {
+   display: block;
+}
+
+.container{
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 1000px;
+}
+
+header{
+   background-color: #4480e8;
+   width: 100%;
+   overflow: hidden;
+   align-items: center;
+
+}
+
+header nav{
+   display: flex;
+justify-content: space-between;
+   margin-top: 20px;
+}
+
+header div a:link,
+header div a:visited{
+   color: white;
+   text-decoration: none;
+}
+
+header img{
+   width: 70px;
+   max-width: 100%;
+   height: 70px;
+
+}
+
+header div a{
+   float: left;
+   clear: both;
+   display: flex;
+   color: white;
+   text-decoration: none;
+   align-items: center;
+   font-family: "Arial Rounded MT Bold";
+   margin-right: 30px;
+}
+
+.connect{
+   color: white;
+   margin-right: 12px;
+   text-decoration: none;
+   padding-top: 3px;
+}
+.connect:visited,
+.connect:link{
+   color: white;
+   text-decoration: none;
+}
+
+nav button{
+   border: none;
+   padding: 4px;
+   border-radius: 2px;
+   color: #4480e8;
+}
+nav input{
+   border: none;
+   border-radius: 2px;
+   font-style: italic;
+   padding: 4px;
+}
+
+.hp{
+   background-image: url(../img/css/resto.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding: 257px;
+   height: 560px;
+}
+
+.hp form{
+   text-align: center;
+   background-color: white;
+   box-shadow: 0 0 30px 5px rgba(0,0,0,0.35);/*x, y, blur(flou), spread (etalage sur le nombre de pixels()*/
+   padding: 6px 27px;
+   width: 464px;
+   border-radius: 3px;
+   margin: 0px 145px;
+}
+.hp select{
+   border: none;
+   color: grey;
+   font-style: italic;
+   margin-right: 50px;
+   font-size: 19px;
+   margin-top: 0px;
+   background-color: white;
+}
+
+.hp button{
+   margin-left: 25px;
+   background-color: #4480e8;
+}
+.hp h1{
+   color:#4480e8;
+   font-family: sans-serif;
+   margin-bottom: 69px;
+   margin-top: -129px;
+}
+
+
+.app{
+   background-image: url(../img/css/appli.jpg);
+   background-repeat: no-repeat;
+   margin-top: 100px;
+   padding: 100px 0px;
+}
+
+footer{
+   padding-bottom: 100px;
+   margin-top: 100px;
+}
+footer p{
+   text-align: center;
+}
+footer .app img{
+   margin-left: 45px;
+   text-align: left;
+}
+footer p{
+   border-top: 1Px solid rgba(0,0,0,0.4);
+   padding-top: 30px;
+}
+.searchbyregion{
+   display: flex;
+}
+aside{
+   margin-top: 60px;
+   width:200px;
+}
+aside legend{
+   font-size: 20px;
+}
+.typenourriture{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.searchbyregion select{
+   margin-top: 12px;
+   margin-bottom: 12px;
+}
+.searchbyregion aside .btn{
+   margin-top: 30px;
+   background-color: #4480e8;
+}
+
+.typenourriture label{
+   margin: 0px;
+}
+.typenourriture input{
+   margin-right: 60px;
+}
+
+
+
+
+.searchbyregion section img{
+   width: 130px;
+   height: 130px;
+   float: left;
+   clear: both;
+   margin-right: 20px;
+
+}
+.note {
+   float: right;
+}
+.searchbyregion section {
+   width: 500px;
+   margin-left: 80px;
+}
+.searchbyregion section div {
+   margin-top: 60px;
+}
+
+
+
+
+
+
+#slider {
+   position: relative;
+   overflow: hidden;
+   margin: 20px auto 0 auto;
+   border-radius: 4px;
+   margin-left:0px;
+}
+
+#slider ul {
+   position: relative;
+   margin: 0;
+   padding: 0;
+   height: 200px;
+   list-style: none;
+}
+
+#slider ul li {
+   position: relative;
+   display: block;
+   float: left;
+   margin: 0;
+   padding: 0;
+   width: 500px;
+   height: 300px;
+   background: #ccc;
+   text-align: center;
+   line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+   border-radius: 7px;
+   position: absolute;
+   top: 40%;
+   z-index: 999;
+   display: block;
+   padding: 7px 10px;
+   padding-bottom:11px;
+   margin-left: 7px;
+   margin-right: 7px;
+   width: auto;
+   height: auto;
+   background: white;
+   color: black;
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 18px;
+   opacity: 0.8;
+   cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+   opacity: 1;
+   -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+   border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+   right: 0;
+   border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+   position: relative;
+   margin: 10px auto;
+   width: 160px;
+   font-size: 18px;
+}
+
+.search img{
+   width: 500px;
+   height: 300px;
+}
+.search{
+    margin-top:60px
+}
+.vignette{
+   border: 1px solid rgba(0,0,0,0.2);
+   border-radius: 3px;
+   width: 120px;
+   padding-right: 0px;
+   text-align: center;
+}
+
+.com{
+   background-color: #4480e8;
+   padding: 10px;
+   color: white;
+   border-radius: 3px;
+}
+.commentaire{
+   margin-top: 40px;
+   margin-bottom: 40px;
+
+}

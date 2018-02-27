@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row my-4">
+        <div class="col">
+            <h1 class="mb-4">Tableau de bord</h1>
+
+            <p><a href="{{ url('admin.restaurant.form') }}">Ajouter un restaurant</a></p>
+            <p><a href="{{ url('admin.restaurant.index') }}">Liste des restaurants</a></p>
+
+
+        </div>
+    </div>
+{% endblock %}

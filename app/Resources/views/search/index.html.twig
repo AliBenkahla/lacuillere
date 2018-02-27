@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="container search">
+
+    {%  if   results.region   == 'Paris'   %}
+        <p>Restaurants situé à {{ results.region }}</p>
+    {% else %}
+        <p>Restaurants dans le {{ results.region }}</p>
+    {% endif %}
+
+
+    <h1>{{ results.name | capitalize}}</h1>
+    <p class="vignette">{{ results.mainFood }}</p>
+    <p>{{ results.city }}</p>
+
+
+    <div id="slider">
+        <a href="#" class="control_next">></a>
+        <a href="#" class="control_prev"><</a>
+
+        <ul>
+        {% for photo in results.photos %}
+            <li><img src="{{ asset('img/restaurant/'~photo.photo)  }}" /></li>
+
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="commentaire">
+        <h1>Commentaires</h1>
+
+          {% for comment in results.comments %}
+            <p>{{ comment.comment }}</p>
+         {% endfor %}
+
+    </div>
+    <a class="com" href="{{ url('addcomment.index') }}">Laissez un commentaire</a>
+
+    </main>
+{% endblock %}

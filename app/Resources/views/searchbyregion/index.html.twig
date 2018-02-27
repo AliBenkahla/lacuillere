@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<main class="searchbyregion container">
+
+    <aside>
+
+            {%  if   searchkey   == 'Paris'   %}
+                <p>Restaurants situé à {{ searchkey }}</p>
+            {% else %}
+                <p>Restaurants dans le {{ searchkey }}</p>
+            {% endif %}
+
+
+        <form method="post" action="{{ url('searchbyfilter.index')}}"><!--method="post" permet d'effacer les demandes dans l'url-->
+            <fieldset>
+                <legend>Affiner la recherche</legend>
+                <select name="filter-price-note">
+                    <option>Tri par:</option>
+                    <option>Prix</option>
+                    <option>Note</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+
+                <div class="typenourriture">
+                    <label>Français</label>
+                    <input name="fr" value="Français" type="checkbox">
+                </div>
+
+                <div class="typenourriture">
+                    <label>Italien</label>
+                    <input name="it" value="Italien" type="checkbox">
+                </div>
+
+                <div class="typenourriture">
+                    <label>Burger US</label>
+                    <input name="brgUS" value="Burger US" type="checkbox">
+                </div>
+
+                <div class="typenourriture">
+                    <label>Burger Chic</label>
+                    <input name="brgChic" value="Burger chic" type="checkbox">
+                </div>
+
+                <div class="typenourriture">
+                    <label>Indien</label>
+                    <input name="Ind" value="Indien" type="checkbox">
+                </div>
+
+            </fieldset>
+            <input type="submit" value="Envoyer" class="btn btn-primary"><!--bouton envoyer-->
+        </form>
+    </aside>
+
+    <section>
+        {% for result in searchresults %}
+            <div>
+                <img src="{{ asset('img/restaurant/'~result.photo)  }}" class="img-fluid" alt="">
+                <p><a href="{{ url('search.index', {'slugRestaurant': result.slug}) }}">{{ result.name }}</a></p>
+                <p>{{ result.mainFood }}</p>
+                <p class="note">Note moyenne : {{ result.avgRate|number_format(1) }} /5</p>
+
+                <p>Prix moyen : {{ result.averagePrice }}</p>
+
+            </div>
+        {% endfor %}
+    </section>
+
+
+</main>
+
+{% endblock %}
+
+

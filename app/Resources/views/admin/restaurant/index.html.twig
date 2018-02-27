@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <h1 class="mb-4">Gestion des restaurants</h1>{#mb-4 = margin bottom#}
+
+    {#<p><a href="{{ url('admin.category.form') }}" class="btn btn-primary>">Ajouter</a></p>#}
+
+    <table class="table table-striped">
+        <tr>
+            <th>Nom</th>
+
+        </tr>
+        {% for result in results %}
+            <tr>
+                <td>{{ result.name }}</td>
+               {# <td><a href="{{ url('admin.restaurant.update', {'id' : result.id}) }}" class="btn btn-warning">Modifier</a>#}
+                </td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+{% endblock %}

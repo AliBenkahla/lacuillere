@@ -1,0 +1,28 @@
+
+<link rel="stylesheet" href ="{{ asset('css/style.css') }}">
+
+
+<header>
+
+    <div>
+        <a href="{{ url('homepage.index')}}"><img src="{{ asset('img/css/logo.jpg') }}" alt="logo">La Cuillère dorée</a>
+    </div>
+
+    <nav>
+        <form  method="post" action="{{ url('search.index')}}">
+            <input class="input-search" list="datalist-search" type="search" name="restaurantname" placeholder="Nom du restaurant" aria-label="Search">
+            <datalist id="datalist-search"></datalist>
+            <button class="">Valider</button>
+        </form>
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a class="connect" href="{{ url('security.logout') }}">Déconnexion</a>
+        {% else %}
+                <a class="connect" href="{{ url('security.login') }}">CONNEXION</a>
+        {% endif %}
+    </nav>
+
+</header>
+
+
+
